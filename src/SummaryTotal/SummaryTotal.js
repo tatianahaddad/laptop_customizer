@@ -2,13 +2,16 @@ import React, { Component } from 'react'
 
 export class SummaryTotal extends Component {
   render() {
-    const total = 'total'
-    /*const total = Object.keys(this.props.selected)
-          .reduce((acc, curr) => acc + this.props.selected[curr].cost, 0);*/   
+    const total = Object.keys(this.props.selected)
+          .reduce((acc, curr) => acc + this.props.selected[curr].cost, 0);  
     return (
       <div className="summary__total">
-        <h1>{total}</h1>
-      </div>
+              <div className="summary__total__label">Your Price: </div>
+              <div className="summary__total__value">
+              { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
+                  .format(total) }
+              </div>
+            </div>
     )
   }
 }

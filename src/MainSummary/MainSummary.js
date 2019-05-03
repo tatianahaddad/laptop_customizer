@@ -3,21 +3,21 @@ import SummaryTotal from '../SummaryTotal/SummaryTotal'
 import SummaryOption from '../SummaryOption/SummaryOption'
 
 export class MainSummary extends Component {
-  render() {   
+  render() {
     return (
-      <>
-        <SummaryOption 
-          summary={this.props.selected}
+      <div>
+        <SummaryOption
+          selected={this.props.selected}
         />
       <div className="summary__total">
         <SummaryTotal 
-          total={this.props.selected}
+          selected={this.props.selected}
         />
       </div>
-      </>
+      </div>
     )
   }
 }
 
-export default MainSummary
+export default MainSummary;
 

@@ -2,16 +2,15 @@ import React, { Component } from 'react'
 
 export class Feature extends Component {
   render() {
-    const features = 'features'
-    /*const features = Object.keys(this.props.features)
+    const features = Object.keys(this.props.features)
           .map(key => {
             const options = this.props.features[key].map((item, index) => {
-              const selectedClass = item.name === this.state.selected[key].name ? 'feature__selected' : '';
-              const featureClass = 'feature__option ' + selectedClass;
+              
+              const featureClass = 'feature__option ' ;
               return <li key={index} className="feature__item">
                 <div className={featureClass}
                   
-                  onClick={e => this.updateFeature(key, item)}>
+                  onClick={() => this.props.handleUpdateFeature(key, item)}>
                     { item.name }
                     ({ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
                       .format(item.cost) })
@@ -25,11 +24,11 @@ export class Feature extends Component {
                 { options }
               </ul>
             </div>
-          });*/    
+          });
     return (
       <div>
-        <h2>{features}
-        {}
+        <h2>
+          {features}
         </h2>
       </div>
     )

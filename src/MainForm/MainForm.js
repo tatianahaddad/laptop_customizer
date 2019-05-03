@@ -12,6 +12,7 @@ export class Mainform extends Component {
             <Feature 
               features={this.props.features}
               handleUpdateFeature={this.props.handleUpdateFeature}
+              selected={this.props.selected}
             />
           </section>
         </>

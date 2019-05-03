@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import MainForm from '../MainForm/MainForm'
 import MainSummary from '../MainSummary/MainSummary';
 // import Feature from '../Feature/Feature'
-// import MainSummary from '../MainSummary/MainSummary'
 
 export class Main extends Component {
   render() {
@@ -11,9 +10,10 @@ export class Main extends Component {
           <MainForm 
             features={this.props.features}
             handleUpdateFeature={this.props.handleUpdateFeature}
+            selected={this.props.selected}
           />
           <MainSummary
-            total={this.props.selected}
+            selected={this.props.selected}
           />
         </main>
     )
