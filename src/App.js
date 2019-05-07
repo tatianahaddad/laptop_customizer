@@ -39,16 +39,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <>
           <Header />
-        </>
-        <> 
           <Main 
             features={this.props.features}
-            handleUpdateFeature={(feature, newValue)=> this.updateFeature(feature, newValue)}
+            updateFeature={(feature, newValue)=> this.updateFeature(feature, newValue)}
             selected={this.state.selected}
-          />
-        </>  
+          /> 
       </div>
     );
   }

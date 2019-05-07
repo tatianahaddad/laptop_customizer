@@ -7,15 +7,15 @@ export class Main extends Component {
   render() {
     return (
       <main>
-          <MainForm 
-            features={this.props.features}
-            handleUpdateFeature={this.props.handleUpdateFeature}
-            selected={this.props.selected}
-          />
-          <MainSummary
-            selected={this.props.selected}
-          />
-        </main>
+        <MainForm 
+          features={this.props.features}
+          updateFeature={this.props.updateFeature}
+          selected={this.props.selected}
+        />
+        <MainSummary
+          selected={this.props.selected}
+        />
+      </main>
     )
   }
 }
