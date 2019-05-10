@@ -5,9 +5,7 @@ export class SummaryOption extends Component {
   summary() {
     return Object.keys(this.props.selected)
     .map(key => {
-      console.log(key, 'key')
-      console.log(this.props.selected[key], 'tgoa')
-      return <Summary name={key}
+      return <Summary key={key} id={key}
       selected={this.props.selected[key]}
       />
     });

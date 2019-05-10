@@ -5,9 +5,7 @@ export class Mainform extends Component {
   features() {
     return Object.keys(this.props.features)
     .map(key => {
-      console.log('key:', key);
-      console.log('this.props.features.', this.props.features[key]);
-      return <Feature name={key} options= {this.props.features[key]}
+      return <Feature key={key} id={key} options= {this.props.features[key]}
       updateFeature={this.props.updateFeature}
       selected={this.props.selected[key]} features={this.props.features} 
       />
